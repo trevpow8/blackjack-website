@@ -111,7 +111,7 @@ function App() {
     }
     else if (playerHands[handIndex].length === 2 && playerHands[handIndex][0] === playerHands[handIndex][1]) {
       handType = 'pair';
-    } else if (playerHands[handIndex].some(card => card === 'A')) {
+    } else if (playerHands[handIndex].length === 2 && playerHands[handIndex].some(card => card === 'A')) {
       handType = 'soft';
     } else {
       handType = 'hard';
