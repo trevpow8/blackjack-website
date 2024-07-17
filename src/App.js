@@ -166,7 +166,7 @@ function App() {
     }
     // Check if the action is 'Double' and if doubling is allowed
     if (action === 'Double' && !canDouble(handIndex)) {
-      action = 'Hit'; // Default to 'Hit' if doubling is not allowed
+      action = strategyTable.hard[playerTotal.toString()][dealerValue];
     }
     if (action === 'Split' && !canSplit(handIndex)) {
       action = strategyTable.hard[playerTotal.toString()][dealerValue];
@@ -190,7 +190,6 @@ function App() {
       const playerTotal = handTotals[handIndex];
       return playerTotal >= 10 && playerTotal <= 11;
     }
-    // Add more conditions based on your settings
     return false;
   };
 
