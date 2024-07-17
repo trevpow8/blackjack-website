@@ -41,7 +41,7 @@ function App() {
     if (newTotal > 21) {
       setMessage('Busted');
     } 
-    else if (newTotal === 21){
+    else if (newTotal === 21 && playerHands[handIndex].length === 2){
       setMessage('BLACKJACK!')
     }
     else {
@@ -93,6 +93,7 @@ function App() {
       return;
     }
     if(playerTotal === 21){
+      setMessage('21')
       return
     }
     if (!dealerCard) {
