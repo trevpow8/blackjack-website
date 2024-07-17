@@ -79,7 +79,7 @@ function App() {
   };
 
   const getCardImage = (card) => {
-    return `/cards/${card}.png`;
+    return `${process.env.PUBLIC_URL}/cards/${card}.png`;
   };
 
   const calculateAction = (handIndex) => {
