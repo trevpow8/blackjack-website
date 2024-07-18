@@ -5,7 +5,7 @@ function SettingsPanel({ settings, setSettings }) {
   const [isMinimized, setIsMinimized] = useState(false);
 
   const togglePanel = () => {
-    setIsMinimized(!isMinimized);
+    setIsMinimized(isMinimized);
   };
 
   const handleChange = (event) => {
