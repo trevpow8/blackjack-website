@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './SettingsPanel.css';
 
 function SettingsPanel({ settings, setSettings }) {
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(true);
 
   const togglePanel = () => {
-    setIsMinimized(isMinimized);
+    setIsMinimized(!isMinimized);
   };
 
   const handleChange = (event) => {
